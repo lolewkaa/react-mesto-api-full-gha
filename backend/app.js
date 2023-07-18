@@ -9,7 +9,7 @@ const router = require('./routes');
 const errorHandler = require('./middlewares/error-handler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { PORT, MONGO_DB } = require('./utils/constant');
-// Слушаем 3000 порт
+
 // const { PORT = 3000 } = process.env;
 
 const app = express();
