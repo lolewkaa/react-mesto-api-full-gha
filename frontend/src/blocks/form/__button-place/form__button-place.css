@@ -1,0 +1,25 @@
+.form__button-place {
+        border: none;
+        background-color:rgba(0, 0, 0, 0);
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+    
+      .form__button:hover {
+        opacity: 0.6;
+      }
+    
+      @media screen and (max-width: 506px) {
+        .form__button-place {
+          width: 20px;
+          height: 20px;
+          right: 0;
+          top: -36px;
+        }
+      }

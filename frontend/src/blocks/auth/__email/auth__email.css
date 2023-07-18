@@ -1,0 +1,9 @@
+.auth__email {
+    width: 358px;
+    margin: 77px 0 57px 0;
+    padding: 0 0 13px 0;
+    background-color: black;
+    border: 0;
+    border-bottom: 2px solid rgba(204, 204, 204, 1);
+    color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,15 @@
+.profile__holder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 336px;
+}
+
+@media screen and (max-width: 346px) {
+  .profile__holder {
+    min-width: 217px;
+    margin-bottom: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+}

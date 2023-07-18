@@ -1,0 +1,13 @@
+.login__button {
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+  border: 0;
+  width: 358px;
+  height: 50px;
+  transition: 0.5s;
+    cursor: pointer;
+}
+
+.login__button:hover {
+    opacity: 0.85;
+}
