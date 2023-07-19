@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.48.65
+IP 158.160.48.65
 
 Frontend http://lolewka.domainname.studen.nomoredomains.xyz
 
