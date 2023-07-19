@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import ProtectedRouteElement from "./ProtectedRoute";
 import Register from "./Register";
@@ -41,7 +41,7 @@ function App() {
   }, [loggedIn]);
 
   //вызывается при монтировании App, и отправляет запрос если jwt есть в хранилище
-  function checkToken() {
+  const checkToken = useCallback(() => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
       auth
@@ -49,15 +49,15 @@ function App() {
         .then((res) => {
           setLoggedIn(true);
           setEmail(res.user.email);
-          // navigate("/");
+          navigate("/", {replace: true});
         })
         .catch((error) => console.log(`Ошибка: ${error}`));
     }
-  }
+  }, [navigate])
 
   useEffect(() => {
     checkToken();
-  }, []);
+  }, [checkToken]);
 
   //отправляет запрос регистрации
   function handleRegister(password, email) {
