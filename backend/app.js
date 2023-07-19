@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
-// const cors = require('cors');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const router = require('./routes');
@@ -14,7 +14,7 @@ const { PORT, MONGO_DB } = require('./utils/constant');
 
 const app = express();
 
-// app.use(cors);
+app.use(cors());
 // анализирует входящие запросы JSON и помещает проанализированные данные в файлы req.body
 app.use(express.json());
 app.use(requestLogger);
