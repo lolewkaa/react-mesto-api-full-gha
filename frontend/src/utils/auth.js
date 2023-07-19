@@ -1,12 +1,12 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'http://api.mesto.backend.nomoredomains.xyz';
 
 function chekResult(res) {
     if (res.ok) {
       return res.json();
     }
-    
+
     // если ошибка, отклоняем промис
-    return Promise.reject(`Ошибка: ${res.status}`); 
+    return Promise.reject(`Ошибка: ${res.status}`);
   }
 
 export const register = (password, email) => {
@@ -35,7 +35,7 @@ export const authorization = (password, email) => {
   headers: {
         "Content-Type": "application/json",
         "Authorization" : `Bearer ${token}`
-    
+
   }
 }).then((res) => chekResult(res))
   }

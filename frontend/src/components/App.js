@@ -48,8 +48,8 @@ function App() {
         .getContent(jwt)
         .then((res) => {
           setLoggedIn(true);
-          setEmail(res.data.email);
-          navigate("/");
+          setEmail(res.user.email);
+          // navigate("/");
         })
         .catch((error) => console.log(`Ошибка: ${error}`));
     }
